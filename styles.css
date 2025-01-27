@@ -83,7 +83,7 @@ nav {
     background-color: #fff;
     box-shadow: 0 0 3px #c9c9c9;
     padding: .5em;
-    z-index: 1;
+    z-index: 9;
 }
 
 #nav-menu {
