@@ -16,6 +16,11 @@
     scrollbar-color: #4c535d #1c222a;
 }
 
+html {
+    text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
 body, html {
     margin: 0;
     padding: 0;
