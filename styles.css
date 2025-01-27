@@ -222,6 +222,17 @@ section svg {
     top: 4px;
 }
 
+#cta {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+#cta #btn-email,
+#cta #btn-cv {
+    margin: 0;
+}
+
 #cta button,
 #projects button {
     font-size: 1.1rem;
@@ -682,11 +693,21 @@ nav.dark {
         width: 350px;
         height: 350px;
     }
+    #cta {
+        margin-top: 3em;
+    }
+    #cta button {
+        padding: 1.25em;
+    }
 }
 
 @media (max-width: 600px) {
     #projects #projects-container {
         grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    }
+    .divider {
+        padding: 1px 0;
+        margin: 3em 0;
     }
 }
 
