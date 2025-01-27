@@ -39,6 +39,14 @@ main, footer, div#hero {
     transform: scale(.95);
 }
 
+#nav-menu.hidden {
+    pointer-events: none;
+}
+
+#nav-menu {
+    pointer-events: auto;
+}
+
 button {
     font-family: inherit;
     cursor: pointer;
@@ -203,7 +211,7 @@ nav #btn-home {
     font-size: 1.125rem;
     gap: 1em 2em;
     margin: 1.5em auto;
-    width: 50%;
+    width: 35em;
 }
 
 #hero #stats .stat p {
@@ -249,6 +257,10 @@ section svg {
     background: none;
     padding: 0;
     margin: 0;
+}
+
+#cta {
+    margin-top: 3em;
 }
 
 #cta button:hover {
@@ -686,18 +698,12 @@ nav.dark {
     #projects #projects-container {
         grid-template: repeat(2, 1fr) / repeat(2, 1fr);
     }
-    #hero #stats {
-        width: 100%;
-    }
     #hero #avatar-container {
         width: 350px;
         height: 350px;
     }
-    #cta {
-        margin-top: 3em;
-    }
-    #cta button {
-        padding: 1.25em;
+    #hero #stats {
+        width: 50%;
     }
 }
 
@@ -715,9 +721,6 @@ nav.dark {
     #projects #projects-container {
         grid-template: repeat(1, 1fr) / repeat(1, 1fr);
     }
-    #hero #stats {
-        width: 70%;
-    }
     #hero #avatar-container {
         width: 350px;
         height: 350px;
@@ -732,9 +735,6 @@ nav.dark {
     #languages .language {
         padding: 2em;
         margin: 0;
-        width: 100%;
-    }
-    #cta button {
         width: 100%;
     }
 }
