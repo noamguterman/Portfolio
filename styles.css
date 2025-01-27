@@ -738,3 +738,14 @@ nav.dark {
         width: 100%;
     }
 }
+
+@media (max-width: 390px) {
+    #cta {
+        flex-direction: column;
+        align-items: center;
+    }
+    #cta a,
+    #cta button {
+        width: 100%;
+    }
+}
