@@ -664,3 +664,51 @@ nav.dark {
         transform: rotate(0deg);
     }
   }
+
+
+@media (max-width: 700px) {
+    #projects #projects-container {
+        grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    }
+    #hero #stats {
+        width: 100%;
+    }
+    #hero #avatar-container {
+        width: 350px;
+        height: 350px;
+    }
+}
+
+@media (max-width: 600px) {
+    #projects #projects-container {
+        grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    #projects #projects-container {
+        grid-template: repeat(1, 1fr) / repeat(1, 1fr);
+    }
+    #hero #stats {
+        width: 70%;
+    }
+    #hero #avatar-container {
+        width: 350px;
+        height: 350px;
+    }
+    #contact #btn-chat {
+        font-size: 2.75rem;
+    }
+    #languages #languages-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    #languages .language {
+        padding: 2em;
+        margin: 0;
+        width: 100%;
+    }
+    #cta button {
+        width: 100%;
+    }
+}
