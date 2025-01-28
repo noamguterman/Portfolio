@@ -1,15 +1,40 @@
 const leftEye = document.getElementById('left-eye')
 const rightEye = document.getElementById('right-eye')
 
+document.getElementById('btn-theme').addEventListener('click', handleThemeButton)
 document.addEventListener('mousemove', followCursor)
 document.addEventListener('click', handleNavMenu)
-document.getElementById('btn-theme').addEventListener('click', handleThemeButton)
-window.addEventListener('blur', () => {
+window.addEventListener('blur', addOutOfFocusClass)
+window.addEventListener('focus', removeOutOfFocusClass)
+document.addEventListener('DOMContentLoaded', updateDates)
+
+function updateDates() {
+    const ageElement = document.getElementById('age')
+    const yearsInTechElement = document.getElementById('years-in-tech')
+    const monthsDiffElement = document.getElementById('months-diff')
+    const currentYearElement = document.getElementById('current-year')
+
+    const birthDate = new Date('1991-03-09')
+    const age = Math.floor((new Date() - birthDate) / (365.25 * 24 * 60 * 60 * 1000))
+    const careerStart = new Date('2014-10-01')
+    const yearsInTech = Math.floor((new Date() - careerStart) / (365.25 * 24 * 60 * 60 * 1000))
+    const frontendStart = new Date('2024-06-01')
+    const monthsDiff = Math.floor((new Date() - frontendStart) / (30.44 * 24 * 60 * 60 * 1000))
+    const currentYear = new Date().getFullYear()
+
+    ageElement.textContent = age
+    yearsInTechElement.textContent = yearsInTech
+    monthsDiffElement.textContent = monthsDiff
+    currentYearElement.textContent = currentYear
+}
+
+function addOutOfFocusClass() {
     document.documentElement.classList.add('window-out-of-focus');
-})
-window.addEventListener('focus', () => {
+}
+
+function removeOutOfFocusClass() {
     document.documentElement.classList.remove('window-out-of-focus');
-})
+}
 
 function handleNavMenu(e) {
     const navMenu = document.getElementById('nav-menu')
