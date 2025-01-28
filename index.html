@@ -9,6 +9,8 @@
         <meta property="og:title" content="Noam Guterman | Frontend Developer">
         <meta property="og:description" content="Explore Noam Guterman's portfolio, projects, and expertise as a developer.">
         <meta property="og:image" content="./assets/og.jpg">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
         <meta property="og:url" content="https://noamguterman.dev/">
         <meta property="og:type" content="website">
         <link rel="icon" href="./assets/favicon.ico">
@@ -16,6 +18,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+        <link rel="preload" href="style.css" as="style" />
+        <link rel="preload" href="main.js" as="script" />
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
@@ -71,7 +75,7 @@
                     <div class="stat">
                         <p>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 0 1-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 0 0 6.16-12.12A14.98 14.98 0 0 0 9.631 8.41m5.96 5.96a14.926 14.926 0 0 1-5.841 2.58m-.119-8.54a6 6 0 0 0-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 0 0-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 0 1-2.448-2.448 14.9 14.9 0 0 1 .06-.312m-2.24 2.39a4.493 4.493 0 0 0-1.757 4.306 4.493 4.493 0 0 0 4.306-1.758M16.5 9a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z"></path></svg>
-                            10 Years of Experience
+                            10 Years in Tech
                         </p>
                     </div>
                     <div class="stat">
@@ -275,51 +279,51 @@
                 </h3>
                 <div id="projects-container">
                     <div class="project">
-                        <h4>Quiz App</h4>
-                        <p>Simple quiz app that lets you select alternatives and then gives you a score. It's built with functional React components.</p>
-                        <div class="links">
-                            <a class="code" href="https://github.com/noamguterman/Quizzical-App" rel="noopener noreferrer" target="_blank"><button class="btn code"><span class="outline">&lt;</span>code <span class="outline">&#47;&gt;</span></button></a>
-                            <a class="live" href="https://noamguterman.github.io/Quizzical-App/" rel="noopener noreferrer" target="_blank"><button class="btn blue-btn">View Project</button></a>
-                        </div>
-                    </div>
-                    <div class="project">
-                        <h4>Personal Dashboard</h4>
-                        <p>A Chrome Extension that gives you an overview over the current time, how the weather is like and how Dogecoin is performing. Interacts with multiple APIs using async JS.</p>
-                        <div class="links">
-                            <a class="code" href="https://github.com/noamguterman/Dashboard-Extension" rel="noopener noreferrer" target="_blank"><button class="btn code"><span class="outline">&lt;</span>code <span class="outline">&#47;&gt;</span></button></a>
-                            <a class="live" href="https://noamguterman.github.io/Dashboard-Extension" rel="noopener noreferrer" target="_blank"><button class="btn blue-btn">View Project</button></a>
-                        </div>
-                    </div>
-                    <div class="project">
-                        <h4>Password Generator</h4>
-                        <p>Generate random passwords based on a few user inputs, e.g. length, types of characters, etc. Built with HTML, CSS, and vanilla JavaScript.</p>
-                        <div class="links">
-                            <a class="code" href="https://github.com/noamguterman/Password-Generator" rel="noopener noreferrer" target="_blank"><button class="btn code"><span class="outline">&lt;</span>code <span class="outline">&#47;&gt;</span></button></a>
-                            <a class="live" href="https://noamguterman.github.io/Password-Generator/" rel="noopener noreferrer" target="_blank"><button class="btn blue-btn">View Project</button></a>
-                        </div>
-                    </div>
-                    <div class="project">
-                        <h4>Film-Fusion</h4>
-                        <p>Generate movie posters based on user input. Built with HTML, CSS, JavaScript and the OpenAI API.</p>
-                        <div class="links">
-                            <a class="code" href="https://github.com/noamguterman/Film-Fusion" rel="noopener noreferrer" target="_blank"><button class="btn code"><span class="outline">&lt;</span>code <span class="outline">&#47;&gt;</span></button></a>
-                            <a class="live" href="https://film-fusion.pages.dev/" rel="noopener noreferrer" target="_blank"><button class="btn blue-btn">View Project</button></a>
-                        </div>
-                    </div>
-                    <div class="project">
                         <h4>Chef Claude</h4>
-                        <p>Generate recipes based on the user's available ingredients. Built with React and Anthropic AI SDK.</p>
+                        <p>Generate recipes based on available ingredients using React and the Anthropic AI SDK. Integrates advanced React concepts and applies AI technology to real-world use cases.</p>
                         <div class="links">
                             <a class="code" href="https://github.com/noamguterman/chef-claude" rel="noopener noreferrer" target="_blank"><button class="btn code"><span class="outline">&lt;</span>code <span class="outline">&#47;&gt;</span></button></a>
                             <a class="live" href="https://noamguterman.github.io/chef-claude/" rel="noopener noreferrer" target="_blank"><button class="btn blue-btn">View Project</button></a>
                         </div>
                     </div>
                     <div class="project">
+                        <h4>Film-Fusion</h4>
+                        <p>Create movie posters based on user input using vanilla JavaScript and the OpenAI API. Highlights dynamic API integration and interactive functionality.</p>
+                        <div class="links">
+                            <a class="code" href="https://github.com/noamguterman/Film-Fusion" rel="noopener noreferrer" target="_blank"><button class="btn code"><span class="outline">&lt;</span>code <span class="outline">&#47;&gt;</span></button></a>
+                            <a class="live" href="https://film-fusion.pages.dev/" rel="noopener noreferrer" target="_blank"><button class="btn blue-btn">View Project</button></a>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <h4>Personal Dashboard</h4>
+                        <p>A Chrome Extension that displays the current time, weather, and Dogecoin performance, using multiple APIs and async JavaScript for real-time updates.</p>
+                        <div class="links">
+                            <a class="code" href="https://github.com/noamguterman/Dashboard-Extension" rel="noopener noreferrer" target="_blank"><button class="btn code"><span class="outline">&lt;</span>code <span class="outline">&#47;&gt;</span></button></a>
+                            <a class="live" href="https://noamguterman.github.io/Dashboard-Extension" rel="noopener noreferrer" target="_blank"><button class="btn blue-btn">View Project</button></a>
+                        </div>
+                    </div>
+                    <div class="project">
                         <h4>Dream Theater Song Quiz</h4>
-                        <p>Audio quiz app that plays snippets of songs for the user to guess. Built with React.</p>
+                        <p>An audio quiz app that plays song snippets for users to guess. Built with React, incorporating state management and audio features.</p>
                         <div class="links">
                             <a class="code" href="https://github.com/noamguterman/dt-quiz" rel="noopener noreferrer" target="_blank"><button class="btn code"><span class="outline">&lt;</span>code <span class="outline">&#47;&gt;</span></button></a>
                             <a class="live" href="https://noamguterman.github.io/dt-quiz/" rel="noopener noreferrer" target="_blank"><button class="btn blue-btn">View Project</button></a>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <h4>Quiz App</h4>
+                        <p>A quiz app built with functional React components where users select answers and receive a score. Demonstrates core React principles and state handling.</p>
+                        <div class="links">
+                            <a class="code" href="https://github.com/noamguterman/Quizzical-App" rel="noopener noreferrer" target="_blank"><button class="btn code"><span class="outline">&lt;</span>code <span class="outline">&#47;&gt;</span></button></a>
+                            <a class="live" href="https://noamguterman.github.io/Quizzical-App/" rel="noopener noreferrer" target="_blank"><button class="btn blue-btn">View Project</button></a>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <h4>Password Generator</h4>
+                        <p>A random password generator built with HTML, CSS, and vanilla JavaScript. Users can specify criteria like length and character types. Implements fundamental web development techniques.</p>
+                        <div class="links">
+                            <a class="code" href="https://github.com/noamguterman/Password-Generator" rel="noopener noreferrer" target="_blank"><button class="btn code"><span class="outline">&lt;</span>code <span class="outline">&#47;&gt;</span></button></a>
+                            <a class="live" href="https://noamguterman.github.io/Password-Generator/" rel="noopener noreferrer" target="_blank"><button class="btn blue-btn">View Project</button></a>
                         </div>
                     </div>
                 </div>
@@ -413,6 +417,6 @@
             <p>© 2025 Noam Guterman</p>
         </footer>
 
-        <script src="./index.js"></script>
+        <script src="./main.js"></script>
     </body>
 </html>
