@@ -17,11 +17,29 @@ document.addEventListener('DOMContentLoaded', () => {
     handleNavScroll()
     applyAnimationsDelay()
     handleLanguageTouch()
+    detectTouchDevice()
+    handleInputType()
 
     setTimeout(() => {
         document.documentElement.classList.remove('no-transition')
     }, 100)
 })
+
+function detectTouchDevice() {
+    if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+        document.documentElement.classList.add('no-hover')
+    }
+}
+
+function handleInputType() {
+    window.addEventListener('touchstart', () => {
+        document.documentElement.classList.add('no-hover')
+    }, { passive: true });
+
+    window.addEventListener('mousemove', () => {
+        document.documentElement.classList.remove('no-hover')
+    })
+}
 
 function handleLanguageTouch() {
     document.querySelectorAll('#languages .language').forEach(language => {

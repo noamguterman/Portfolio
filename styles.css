@@ -11,6 +11,14 @@
   box-sizing: border-box;
 }
 
+.no-hover .btn:hover,
+.no-hover #cta button:hover,
+.no-hover #projects button:hover,
+.no-hover #contact #socials .social-btn:hover {
+    background-color: inherit !important;
+    color: inherit !important;
+}
+
 :root {
   scrollbar-color: #787f86 #fefeff;
 }
