@@ -915,8 +915,14 @@ nav #btn-theme.dark:hover {
 
 @media (max-width: 700px) {
   #hero #avatar-container {
-    width: 350px;
-    height: 350px;
+    transform: scale(.9);
+    left: -10px;
+  }
+  h1#hi {
+    margin-top: 0;
+  }
+  div#hero {
+    padding-top: .1em;
   }
 }
 
@@ -943,10 +949,9 @@ nav #btn-theme.dark:hover {
 }
 
 @media (max-width: 500px) {
-  #hero #avatar-container {
-    width: 350px;
-    height: 350px;
-  }
+  /* #hero #avatar-container {
+    transform: scale(.9);
+  } */
   #contact #btn-chat {
     font-size: 2.75rem;
   }
