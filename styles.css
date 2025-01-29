@@ -169,12 +169,6 @@ nav #btn-home {
   border-radius: 10px;
 }
 
-nav #btn-nav-menu:hover,
-nav #btn-theme:hover,
-nav #btn-home:hover {
-  background-color: #d3d4d6;
-}
-
 nav svg {
   width: 24px;
   position: relative;
@@ -292,19 +286,10 @@ section svg {
   margin-top: 3em;
 }
 
-#cta button:hover {
-  background-color: #d3d3d2;
-}
-
 #cta button.blue-btn,
 #projects button.blue-btn {
   background-color: #126cad;
   color: white;
-}
-
-#cta button.blue-btn:hover,
-#projects button.blue-btn:hover {
-  background-color: #0e5e95;
 }
 
 #cta svg {
@@ -461,6 +446,7 @@ section h4 a {
   background-color: #f2f2f2;
   padding: 0.4em 1em;
   border-radius: 20px;
+  cursor: default;
 }
 
 #contact #btn-chat {
@@ -483,10 +469,6 @@ section h4 a {
 #contact #socials .social-btn {
   padding: 0.5em 1em;
   border-radius: 10px;
-}
-
-#contact #socials .social-btn:hover {
-  background-color: #d3d4d6;
 }
 
 #contact button {
@@ -668,15 +650,8 @@ nav.dark,
 #nav-menu.dark {
   box-shadow: 0 0 3px #1b1b1b;
 }
-nav #btn-nav-menu.dark:hover,
-nav #btn-theme.dark:hover,
-nav #btn-home.dark:hover,
-#nav-menu li .nav-a.dark:hover,
-#contact #socials .social-btn.dark:hover {
+#nav-menu li .nav-a.dark:hover {
   background-color: #393e47;
-}
-#cta button.dark:hover {
-  background-color: #15181e;
 }
 #projects .project.dark,
 #languages .language.dark,
@@ -787,6 +762,33 @@ nav #btn-theme.dark:hover {
 .rotate-animation,
 .rotate-animation-reverse {
   will-change: opacity, transform;
+}
+
+@media (hover: hover) {
+  nav #btn-nav-menu:hover,
+  nav #btn-theme:hover,
+  nav #btn-home:hover {
+    background-color: #d3d4d6;
+  }
+  #cta button:hover {
+    background-color: #d3d3d2;
+  }
+  #cta button.blue-btn:hover,
+  #projects button.blue-btn:hover {
+    background-color: #0e5e95;
+  }
+  #contact #socials .social-btn:hover {
+    background-color: #d3d4d6;
+  }
+  nav #btn-nav-menu.dark:hover,
+  nav #btn-theme.dark:hover,
+  nav #btn-home.dark:hover,
+  #contact #socials .social-btn.dark:hover {
+    background-color: #393e47;
+  }
+  #cta button.dark:hover {
+    background-color: #15181e;
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {
