@@ -791,6 +791,16 @@ nav #btn-theme.dark:hover {
   }
 }
 
+@media (hover: none) {
+  .btn:hover,
+  #cta button:hover,
+  #projects button:hover,
+  #contact #socials .social-btn:hover {
+      background-color: inherit !important;
+      color: inherit !important;
+  }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .no-transition * {
     transition: none !important;
@@ -987,12 +997,4 @@ nav #btn-theme.dark:hover {
   #hero #stats .stat {
     width: 100%;
   }
-}
-
-.no-hover .btn:hover,
-.no-hover #cta button:hover,
-.no-hover #projects button:hover,
-.no-hover #contact #socials .social-btn:hover {
-    background-color: inherit !important;
-    color: inherit !important;
 }
