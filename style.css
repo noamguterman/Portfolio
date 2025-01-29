@@ -1,3 +1,36 @@
+@font-face {
+  font-family: "Quicksand";
+  src: url("./assets/fonts/Quicksand-Regular.woff2") format("woff2"),
+       url("./fonts/Quicksand-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Quicksand";
+  src: url("./assets/fonts/Quicksand-Medium.woff2") format("woff2"),
+       url("./fonts/Quicksand-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Quicksand";
+  src: url("./assets/fonts/Quicksand-SemiBold.woff2") format("woff2"),
+       url("./fonts/Quicksand-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Quicksand";
+  src: url("./assets/fonts/Quicksand-Bold.woff2") format("woff2"),
+       url("./assets/fonts/Quicksand-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 *,
 *::before,
 *::after {
@@ -175,7 +208,7 @@ nav svg {
 }
 
 nav #btn-home {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 1.25rem;
   background: none;
   border: none;
@@ -191,7 +224,6 @@ nav #btn-home {
   position: relative;
   justify-content: center;
   align-items: center;
-  /* background-color: #6e6e6e; */
   width: 400px;
   height: 400px;
   margin: 0 auto;
@@ -267,7 +299,7 @@ section svg {
 #cta button,
 #projects button {
   font-size: 1.1rem;
-  font-weight: bold;
+  font-weight: 700;
   padding: 1.2em 1.5em;
   border: none;
   border-radius: 8px;
@@ -459,7 +491,7 @@ section h4 a {
 
 #contact #btn-chat {
   font-size: 3.75rem;
-  font-weight: bold;
+  font-weight: 700;
   display: block;
   margin: 1em auto;
   border: none;
@@ -485,7 +517,7 @@ section h4 a {
 
 #contact button {
   font-size: 0.875rem;
-  font-weight: bold;
+  font-weight: 700;
   border: none;
   background: none;
   cursor: pointer;
@@ -659,11 +691,9 @@ nav.dark,
   background-color: #1d222b;
   color: #a7adba;
 }
-
 #nav-menu.dark {
   box-shadow: 0 0 3px #1b1b1b;
 }
-
 nav #btn-nav-menu.dark:hover,
 nav #btn-theme.dark:hover,
 nav #btn-home.dark:hover,
@@ -671,11 +701,9 @@ nav #btn-home.dark:hover,
 #contact #socials .social-btn.dark:hover {
   background-color: #393e47;
 }
-
 #cta button.dark:hover {
   background-color: #15181e;
 }
-
 #projects .project.dark,
 #languages .language.dark,
 #certificates .certificate.dark,
@@ -683,11 +711,9 @@ nav #btn-home.dark:hover,
 #cta button.dark {
   background-color: #181e25;
 }
-
 nav.dark {
   box-shadow: 0 0 3px #1b1b1b;
 }
-
 .divider.dark {
   background-color: #2a3139;
 }
@@ -710,6 +736,7 @@ nav.dark {
 }
 #certificates a {
   cursor: pointer;
+  will-change: transform;
 }
 
 #tools .bub:hover,
@@ -722,10 +749,85 @@ nav.dark {
   z-index: 2;
 }
 
+nav #btn-theme {
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1e2837;
+}
+
+nav #btn-theme::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-color: currentColor;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+#btn-theme::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-size: cover;
+  background-position: center;
+}
+
+nav #btn-theme.light::before {
+  -webkit-mask-image: url('./assets/light-mode-icon.svg');
+  mask-image: url('./assets/light-mode-icon.svg');
+}
+
+nav #btn-theme.dark::before {
+  -webkit-mask-image: url('./assets/dark-mode-icon.svg');
+  mask-image: url('./assets/dark-mode-icon.svg');
+}
+
+nav #btn-theme.light {
+  color: #1e2837;
+}
+
+nav #btn-theme.dark {
+  color: #a7adba;
+}
+
+nav #btn-theme:hover {
+  background-color: #d3d4d6;
+}
+
+nav #btn-theme.dark:hover {
+  background-color: #393e47;
+}
+
+.rotate-animation,
+.rotate-animation-reverse {
+  will-change: opacity, transform;
+}
+
 @media (prefers-reduced-motion: no-preference) {
+  .no-transition * {
+    transition: none !important;
+  }
+
   html {
     scroll-behavior: smooth;
   }
+
+  #cta button {
+    animation: ctaWiggle 0.3s ease-out both;
+  }
+
   .btn,
   .project,
   .language,
@@ -734,49 +836,68 @@ nav.dark {
     transition: transform 0.1s ease-in-out, background-color 0.2s ease-out,
       font-weight 0.2s ease-out;
   }
+
   #nav-menu {
     transition: transform 0.1s ease-in-out, opacity 0.1s ease-in-out;
   }
+  
   #nav-menu li a,
   #projects .project .links .code:hover .outline {
     transition: background-color 0.3s ease, color 0.3s ease;
   }
+
   .rotate-animation,
   .rotate-animation-reverse {
     animation: fadein 0.3s ease-in-out;
   }
+
   .rotate-animation-reverse {
     animation: fadein-reverse 0.3s ease-in-out;
   }
+
+  #languages .language:first-child::before,
+  #languages .language:nth-child(2)::before {
+    position: absolute;
+    font-size: 15.5rem;
+    color: #f8f8f8;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 0.3s ease-out;
+  }
+  
   #languages .language:first-child::before {
     content: "אבגדה";
-    position: absolute;
-    transform: translate(-26%, -50%);
-    font-size: 15.5rem;
-    color: #f8f8f8;
-    opacity: 0;
-    z-index: 1;
-    transition: opacity 0.3s ease-out;
+    transform: translate(-15%, -49%);
   }
+  
   #languages .language:nth-child(2)::before {
     content: "abcde";
-    position: absolute;
-    transform: translate(-8%, -50%);
-    font-size: 15.5rem;
+    transform: translate(-6%, -49%);
     font-weight: 500;
-    color: #f8f8f8;
-    opacity: 0;
-    z-index: 1;
-    transition: opacity 0.3s ease-out;
   }
+  
   #languages .language:first-child:hover::before,
   #languages .language:nth-child(2):hover::before {
     opacity: 1;
+    will-change: opacity, transform;
   }
+  
   #languages .language.dark:first-child::before,
   #languages .language.dark:nth-child(2)::before {
     color: #1c212c;
   }
+
+  #languages .language:first-child.active::before,
+  #languages .language:nth-child(2).active::before {
+    opacity: 1;
+  }
+
+  #languages .language:first-child::before,
+  #languages .language:nth-child(2)::before {
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+  }
+
   #hero #avatar-container .eye {
     transition: transform 0.1s ease;
   }
@@ -785,22 +906,36 @@ nav.dark {
 @keyframes fadein {
   from {
     opacity: 0;
-    transform: rotate(0deg);
+    transform: rotate(0deg) translateZ(0);
   }
   to {
     opacity: 1;
-    transform: rotate(45deg);
+    transform: rotate(45deg) translateZ(0);
   }
 }
 
 @keyframes fadein-reverse {
   from {
     opacity: 0;
-    transform: rotate(45deg);
+    transform: rotate(45deg) translateZ(0);
   }
   to {
     opacity: 1;
-    transform: rotate(0deg);
+    transform: rotate(0deg) translateZ(0);
+  }
+}
+
+@keyframes ctaWiggle {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
   }
 }
 

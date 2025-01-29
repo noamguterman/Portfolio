@@ -1,12 +1,111 @@
 const leftEye = document.getElementById('left-eye')
 const rightEye = document.getElementById('right-eye')
+const themeBtn = document.getElementById('btn-theme')
 
-document.getElementById('btn-theme').addEventListener('click', handleThemeButton)
+document.documentElement.classList.add('no-transition')
+
+if (themeBtn) {
+    themeBtn.addEventListener('click', handleThemeButton);
+}
 document.addEventListener('mousemove', followCursor)
 document.addEventListener('click', handleNavMenu)
 window.addEventListener('blur', addOutOfFocusClass)
 window.addEventListener('focus', removeOutOfFocusClass)
-document.addEventListener('DOMContentLoaded', updateDates)
+document.addEventListener('DOMContentLoaded', () => {
+    getLocalStorageTheme()
+    updateDates()
+    handleNavScroll()
+    applyAnimationsDelay()
+    handleLanguageTouch()
+
+    setTimeout(() => {
+        document.documentElement.classList.remove('no-transition')
+    }, 100)
+})
+
+function handleLanguageTouch() {
+    document.querySelectorAll('#languages .language').forEach(language => {
+        language.addEventListener('click', () => {
+            language.classList.toggle('active')
+            
+            setTimeout(() => {
+                language.classList.remove('active');
+            }, 300)
+        })
+    })
+}
+
+function applyAnimationsDelay() {
+    const ctaButtons = document.querySelectorAll("#cta button")
+
+    ctaButtons.forEach((button, index) => {
+        button.style.animationDelay = `${index * 0.1}s`;
+    })
+}
+
+function getLocalStorageTheme() {
+    const currentTheme = localStorage.getItem('theme') || 'light'
+    
+    document.body.classList.toggle('dark', currentTheme === 'dark')
+    document.documentElement.classList.toggle('dark', currentTheme === 'dark')
+
+    applyThemeToElements(currentTheme)
+    updateThemeButtonIcon(currentTheme)
+}
+
+function applyThemeToElements(theme) {
+    const elements = [
+        document.querySelectorAll('.project'),
+        document.querySelectorAll('.language'),
+        document.querySelectorAll('.certificate'),
+        document.querySelectorAll('.tool'),
+        document.querySelectorAll('.divider'),
+        document.querySelectorAll('.nav-a'),
+        document.querySelectorAll('.social-btn'),
+        document.querySelectorAll('.date'),
+        [document.getElementById('btn-cv')],
+        [document.querySelector('nav')],
+        [document.getElementById('nav-menu')],
+        [document.getElementById('btn-nav-menu')],
+        [document.getElementById('btn-theme')],
+        [document.getElementById('btn-home')],
+        [document.getElementById('education-container')],
+        [document.getElementById('experience-container')]
+    ]
+
+    elements.forEach(group => {
+        group.forEach(el => {
+            if (el) {
+                el.classList.toggle('dark', theme === 'dark')
+            }
+        })
+    })
+}
+
+function updateThemeButtonIcon(theme) {
+    const themeBtn = document.getElementById('btn-theme')
+    if (!themeBtn) return
+
+    themeBtn.classList.remove('dark', 'light')
+    themeBtn.classList.add(theme)
+}
+
+function handleNavScroll() {
+    const navLinks = document.querySelectorAll('.nav-a')
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault()
+            const targetId = link.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+                targetElement.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth' })
+            }
+        })
+    })
+}
 
 function updateDates() {
     const ageElement = document.getElementById('age')
@@ -52,88 +151,31 @@ function handleNavMenu(e) {
 }
 
 function handleThemeButton() {
-    const themeButton = document.getElementById('btn-theme')
     const currentTheme = localStorage.getItem('theme') || 'light'
-    const body = document.body
-    const projects = document.querySelectorAll('.project')
-    const languages = document.querySelectorAll('.language')
-    const certificates = document.querySelectorAll('.certificate')
-    const tools = document.querySelectorAll('.tool')
-    const cvBtn = document.getElementById('btn-cv')
-    const nav = document.querySelector('nav')
-    const navMenu = document.getElementById('nav-menu')
-    const dividers = document.querySelectorAll('.divider')
-    const btnNavMenu = document.getElementById('btn-nav-menu')
-    const btnTheme = document.getElementById('btn-theme')
-    const btnHome = document.getElementById('btn-home')
-    const navA = document.querySelectorAll('.nav-a')
-    const socialBtns = document.querySelectorAll('.social-btn')
-    const educationContainer = document.getElementById('education-container')
-    const experienceContainer = document.getElementById('experience-container')
-    const dateElements = document.querySelectorAll('.date')
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light'
 
-    themeButton.removeChild(themeButton.firstChild)
+    applyThemeToElements(newTheme)
+    document.body.classList.toggle('dark', newTheme === 'dark')
+    document.documentElement.classList.toggle('dark', newTheme === 'dark')
+    localStorage.setItem('theme', newTheme)
 
-    if (currentTheme === 'light') {
-        themeButton.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"></path></svg>`
+    const themeBtn = document.getElementById('btn-theme')
+    
+    themeBtn.classList.remove('rotate-animation', 'rotate-animation-reverse')
+    void themeBtn.offsetWidth
 
-        themeButton.classList.add('rotate-animation-reverse')
-        setTimeout(() => {
-            themeButton.classList.remove('rotate-animation-reverse')
-        }, 200)
-        
-        body.classList.add('dark')
-        projects.forEach(project => project.classList.add('dark'))
-        languages.forEach(language => language.classList.add('dark'))
-        certificates.forEach(certificate => certificate.classList.add('dark'))
-        tools.forEach(tool => tool.classList.add('dark'))
-        cvBtn.classList.add('dark')
-        nav.classList.add('dark')
-        navMenu.classList.add('dark')
-        dividers.forEach(divider => divider.classList.add('dark'))
-        btnNavMenu.classList.add('dark')
-        btnTheme.classList.add('dark')
-        btnHome.classList.add('dark')
-        navA.forEach(a => a.classList.add('dark'))
-        socialBtns.forEach(btn => btn.classList.add('dark'))
-        document.documentElement.classList.add('dark')
-        educationContainer.classList.add('dark')
-        experienceContainer.classList.add('dark')
-        dateElements.forEach(date => date.classList.add('dark'))
+    themeBtn.classList.remove('dark', 'light')
+    themeBtn.classList.add(newTheme)
+    themeBtn.classList.add(newTheme === 'dark' ? 'rotate-animation-reverse' : 'rotate-animation')
 
-        localStorage.setItem('theme', 'dark')
-    } else {
-        themeButton.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"></path></svg>`
-
-        themeButton.classList.add('rotate-animation')
-        setTimeout(() => {
-            themeButton.classList.remove('rotate-animation')
-        }, 200)
-        
-        body.classList.remove('dark')
-        projects.forEach(project => project.classList.remove('dark'))
-        languages.forEach(language => language.classList.remove('dark'))
-        certificates.forEach(certificate => certificate.classList.remove('dark'))
-        tools.forEach(tool => tool.classList.remove('dark'))
-        cvBtn.classList.remove('dark')
-        nav.classList.remove('dark')
-        navMenu.classList.remove('dark')
-        dividers.forEach(divider => divider.classList.remove('dark'))
-        btnNavMenu.classList.remove('dark')
-        btnTheme.classList.remove('dark')
-        btnHome.classList.remove('dark')
-        navA.forEach(a => a.classList.remove('dark'))
-        socialBtns.forEach(btn => btn.classList.remove('dark'))
-        document.documentElement.classList.remove('dark')
-        educationContainer.classList.remove('dark')
-        experienceContainer.classList.remove('dark')
-        dateElements.forEach(date => date.classList.remove('dark'))
-
-        localStorage.setItem('theme', 'light')
-    }
+    setTimeout(() => {
+        themeBtn.classList.remove('rotate-animation', 'rotate-animation-reverse')
+    }, 300)
 }
 
 function followCursor(e) {
+    if (!leftEye || !rightEye) return
+
     const eyes = [leftEye, rightEye]
     
     // Calculate center point between eyes
