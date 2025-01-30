@@ -408,7 +408,6 @@ section h4 a {
 }
 #projects .project .links .code {
   font-weight: 500;
-  padding: .2em;
 }
 #projects .project .links .code .outline {
   color: transparent;
@@ -458,6 +457,7 @@ section h4 a {
   border: none;
   background: none;
   color: #126cad;
+  text-align: center;
 }
 
 #contact #socials {
@@ -908,7 +908,7 @@ nav #btn-theme.dark:hover {
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 885px) {
   #projects #projects-container {
     grid-template: repeat(2, 1fr) / repeat(2, 1fr);
   }
