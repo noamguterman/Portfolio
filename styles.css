@@ -408,6 +408,7 @@ section h4 a {
 }
 #projects .project .links .code {
   font-weight: 500;
+  padding: .2em;
 }
 #projects .project .links .code .outline {
   color: transparent;

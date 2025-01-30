@@ -10,7 +10,7 @@
         <meta property="og:title" content="Noam Guterman | Frontend Developer">
         <meta property="og:description" content="Explore Noam Guterman's portfolio, projects, and expertise as a developer.">
         <meta property="og:type" content="website">
-        <meta property="og:image" content="./assets/og.jpg">
+        <meta property="og:image" content="https://noamguterman.dev/assets/og.jpg">
         <meta property="og:image:type" content="image/jpeg">
         <meta property="og:image:width" content="512">
         <meta property="og:image:height" content="512">
@@ -28,13 +28,13 @@
     <body>
         <header id="home">
             <nav>
-                <button class="btn" id="btn-nav-menu">
+                <button class="btn" id="btn-nav-menu" aria-label="Open navigation menu">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12"></path></svg>
                 </button>
                 <a class="nav-a" href="#home">
                     <button class="btn" id="btn-home">noamguterman.dev</button>
                 </a>
-                <button class="btn" id="btn-theme">
+                <button class="btn" id="btn-theme" aria-label="Toggle light/dark theme">
                     <!-- dynamic theme button svg -->
                 </button>
             </nav>
@@ -53,7 +53,7 @@
                 <div id="avatar-container">
                     <div class="eye left" id="left-eye"></div>
                     <div class="eye right" id="right-eye"></div>
-                    <img id="avatar" src="./assets/avatar.webp" width="295" height="350" />
+                    <img id="avatar" src="./assets/avatar.webp" width="295" height="350" alt="Cartoon avatar of Noam Guterman" />
                 </div>
                 <h1 id="hi">Hi! I'm Noam Guterman</h1>
                 <h2>Frontend Developer</h2>
@@ -96,7 +96,7 @@
                     </div>
                 </section>
                 <section id="cta">
-                    <a href="mailto:noamguterman@gmail.com?subject=Hi Noam, I'd like to hire you" rel="noopener noreferrer">
+                    <a href="mailto:noamguterman@gmail.com?subject=Hi Noam, I'd like to hire you">
                         <button id="btn-email" class="btn blue-btn">
                             Hire Me!
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z"></path></svg>
@@ -149,15 +149,15 @@
                 <div id="education-container">
                     <div class="education-item">
                         <p class="date">Sep 2021 - Oct 2022</p>
-                        <h4>Master of Arts in Sound Design for Video Games, <a href="https://www.chi.ac.uk/" rel="noopener noreferrer" target="_blank">University of Chichester</a></h4>
+                        <h4>Master of Arts in Sound Design for Video Games, <a href="https://www.chi.ac.uk/" target="_blank">University of Chichester</a></h4>
                     </div>
                     <div class="education-item">
                         <p class="date">Apr 2014 - Aug 2016</p>
-                        <h4>Diploma in Game Audio & Interactive Scoring, <a href="https://www.berklee.edu/" rel="noopener noreferrer" target="_blank">Berklee College of Music</a></h4>
+                        <h4>Diploma in Game Audio & Interactive Scoring, <a href="https://www.berklee.edu/" target="_blank">Berklee College of Music</a></h4>
                     </div>
                     <div class="education-item">
                         <p class="date">Jan 2013 - Mar 2014</p>
-                        <h4>Diploma in Audio Design & Music Production, <a href="https://www.bpm-music.com/" rel="noopener noreferrer" target="_blank">BPM College</a></h4>
+                        <h4>Diploma in Audio Design & Music Production, <a href="https://www.bpm-music.com/" target="_blank">BPM College</a></h4>
                     </div>
                 </div>
             </section>
@@ -217,7 +217,7 @@
                 <div id="experience-container">
                     <div class="exprience-item">
                         <p class="date">Jun 2024 - Present</p>
-                        <h4>Frontend Developer, <a href="https://noamguterman.dev/" rel="noopener noreferrer" target="_blank">Freelance</a></h4>
+                        <h4>Frontend Developer, <a href="https://noamguterman.dev/" target="_blank">Freelance</a></h4>
                         <p>
                             As a freelance frontend developer, I'm designing and implementing responsive, mobile-first websites and web applications for a variety of clients.
                             I specialize in developing interactive components using React and modern JavaScript,
@@ -229,7 +229,7 @@
                     </div>
                     <div class="experience-item">
                         <p class="date">May 2019 - May 2024</p>
-                        <h4>Audio Lead / Technical Artist, <a href="https://www.inceptionxr.com/" rel="noopener noreferrer" target="_blank">Inception XR</a></h4>
+                        <h4>Audio Lead / Technical Artist, <a href="https://www.inceptionxr.com/" target="_blank">Inception XR</a></h4>
                         <p>
                             At Inception XR, I integrated immersive audio into interactive projects,
                             collaborating with cross-functional teams to enhance user experiences.
@@ -241,7 +241,7 @@
                     </div>
                     <div class="experience-item">
                         <p class="date">Dec 2018 - Jul 2023</p>
-                        <h4>Sound Designer, <a href="https://epicstockmedia.com/" rel="noopener noreferrer" target="_blank">Epic Stock Media</a></h4>
+                        <h4>Sound Designer, <a href="https://epicstockmedia.com/" target="_blank">Epic Stock Media</a></h4>
                         <p>
                             At Epic Stock Media, I leveraged extensive knowledge in field recording
                             sessions to create high-quality sound assets. My responsibilities included
@@ -252,7 +252,7 @@
                     </div>
                     <div class="experience-item">
                         <p class="date">Oct 2014 - May 2019</p>
-                        <h4>Sound Designer, <a href="https://www.noamguterman.com/" rel="noopener noreferrer" target="_blank">Freelance</a></h4>
+                        <h4>Sound Designer, <a href="https://www.noamguterman.com/" target="_blank">Freelance</a></h4>
                         <p>
                             As a freelance sound designer, I built custom interactive audio systems
                             and integrated audio middleware to enable adaptive sound behaviors based
@@ -280,48 +280,48 @@
                         <h4>Chef Claude</h4>
                         <p>Generate recipes based on available ingredients using React and the Anthropic AI SDK. Integrates advanced React concepts and applies AI technology to real-world use cases.</p>
                         <div class="links">
-                            <a class="code" href="https://github.com/noamguterman/chef-claude" rel="noopener noreferrer" target="_blank"><button class="btn code"><span class="outline">&lt;</span>code <span class="outline">&#47;&gt;</span></button></a>
-                            <a class="live" href="https://noamguterman.github.io/chef-claude/" rel="noopener noreferrer" target="_blank"><button class="btn blue-btn">View Project</button></a>
+                            <a class="code" href="https://github.com/noamguterman/chef-claude" target="_blank"><button class="btn code"><span class="outline">&lt;</span>code <span class="outline">&#47;&gt;</span></button></a>
+                            <a class="live" href="https://noamguterman.github.io/chef-claude/" target="_blank"><button class="btn blue-btn">View Project</button></a>
                         </div>
                     </div>
                     <div class="project">
                         <h4>Film-Fusion</h4>
                         <p>Create movie posters based on user input using vanilla JavaScript and the OpenAI API. Highlights dynamic API integration and interactive functionality.</p>
                         <div class="links">
-                            <a class="code" href="https://github.com/noamguterman/Film-Fusion" rel="noopener noreferrer" target="_blank"><button class="btn code"><span class="outline">&lt;</span>code <span class="outline">&#47;&gt;</span></button></a>
-                            <a class="live" href="https://film-fusion.pages.dev/" rel="noopener noreferrer" target="_blank"><button class="btn blue-btn">View Project</button></a>
+                            <a class="code" href="https://github.com/noamguterman/Film-Fusion" target="_blank"><button class="btn code"><span class="outline">&lt;</span>code <span class="outline">&#47;&gt;</span></button></a>
+                            <a class="live" href="https://film-fusion.pages.dev/" target="_blank"><button class="btn blue-btn">View Project</button></a>
                         </div>
                     </div>
                     <div class="project">
                         <h4>Personal Dashboard</h4>
                         <p>A Chrome Extension that displays the current time, weather, and Dogecoin performance, using multiple APIs and async JavaScript for real-time updates.</p>
                         <div class="links">
-                            <a class="code" href="https://github.com/noamguterman/Dashboard-Extension" rel="noopener noreferrer" target="_blank"><button class="btn code"><span class="outline">&lt;</span>code <span class="outline">&#47;&gt;</span></button></a>
-                            <a class="live" href="https://noamguterman.github.io/Dashboard-Extension" rel="noopener noreferrer" target="_blank"><button class="btn blue-btn">View Project</button></a>
+                            <a class="code" href="https://github.com/noamguterman/Dashboard-Extension" target="_blank"><button class="btn code"><span class="outline">&lt;</span>code <span class="outline">&#47;&gt;</span></button></a>
+                            <a class="live" href="https://noamguterman.github.io/Dashboard-Extension" target="_blank"><button class="btn blue-btn">View Project</button></a>
                         </div>
                     </div>
                     <div class="project">
                         <h4>Dream Theater Song Quiz</h4>
                         <p>An audio quiz app that plays song snippets for users to guess. Built with React, incorporating state management and audio features.</p>
                         <div class="links">
-                            <a class="code" href="https://github.com/noamguterman/dt-quiz" rel="noopener noreferrer" target="_blank"><button class="btn code"><span class="outline">&lt;</span>code <span class="outline">&#47;&gt;</span></button></a>
-                            <a class="live" href="https://noamguterman.github.io/dt-quiz/" rel="noopener noreferrer" target="_blank"><button class="btn blue-btn">View Project</button></a>
+                            <a class="code" href="https://github.com/noamguterman/dt-quiz" target="_blank"><button class="btn code"><span class="outline">&lt;</span>code <span class="outline">&#47;&gt;</span></button></a>
+                            <a class="live" href="https://noamguterman.github.io/dt-quiz/" target="_blank"><button class="btn blue-btn">View Project</button></a>
                         </div>
                     </div>
                     <div class="project">
                         <h4>Assembly Endgame</h4>
                         <p>A word-guessing game built with React. Features complex state management, conditional rendering, accessibility attributes, and visual feedback using third-party libraries like clsx and Confetti.</p>
                         <div class="links">
-                            <a class="code" href="https://github.com/noamguterman/Assembly-Endgame" rel="noopener noreferrer" target="_blank"><button class="btn code"><span class="outline">&lt;</span>code <span class="outline">&#47;&gt;</span></button></a>
-                            <a class="live" href="https://noamguterman.github.io/Assembly-Endgame/" rel="noopener noreferrer" target="_blank"><button class="btn blue-btn">View Project</button></a>
+                            <a class="code" href="https://github.com/noamguterman/Assembly-Endgame" target="_blank"><button class="btn code"><span class="outline">&lt;</span>code <span class="outline">&#47;&gt;</span></button></a>
+                            <a class="live" href="https://noamguterman.github.io/Assembly-Endgame/" target="_blank"><button class="btn blue-btn">View Project</button></a>
                         </div>
                     </div>
                     <div class="project">
                         <h4>Password Generator</h4>
                         <p>A random password generator built with HTML, CSS, and vanilla JavaScript. Users can specify criteria like length and character types. Implements fundamental web development techniques.</p>
                         <div class="links">
-                            <a class="code" href="https://github.com/noamguterman/Password-Generator" rel="noopener noreferrer" target="_blank"><button class="btn code"><span class="outline">&lt;</span>code <span class="outline">&#47;&gt;</span></button></a>
-                            <a class="live" href="https://noamguterman.github.io/Password-Generator/" rel="noopener noreferrer" target="_blank"><button class="btn blue-btn">View Project</button></a>
+                            <a class="code" href="https://github.com/noamguterman/Password-Generator" target="_blank"><button class="btn code"><span class="outline">&lt;</span>code <span class="outline">&#47;&gt;</span></button></a>
+                            <a class="live" href="https://noamguterman.github.io/Password-Generator/" target="_blank"><button class="btn blue-btn">View Project</button></a>
                         </div>
                     </div>
                 </div>
@@ -354,45 +354,44 @@
                     Certificates
                 </h3>
                 <div id="certificates-container">
-                    <a class="certificate" href="https://drive.google.com/file/d/1z6vYe2SbvgJ-sNkoiNR_cSPxdLENFHu_/view?usp=sharing" rel="noopener noreferrer" target="_blank"><span class="bub"><span class="dot ai"></span>The AI Engineer Path</span></a>
-                    <a class="certificate" href="https://drive.google.com/file/d/1G88iS_Nei9aFGO3M1zX2IiGxjHvs9Nyt/view?usp=sharing" rel="noopener noreferrer" target="_blank"><span class="bub"><span class="dot html"></span>The Frontend Developer Career Path</span></a>
-                    <a class="certificate" href="https://drive.google.com/file/d/1WC7MRmPdYPWvXcRStgdgwoKoDJzyrI_O/view?usp=sharing" rel="noopener noreferrer" target="_blank"><span class="bub"><span class="dot js"></span>Advanced JavaScript</span></a>
-                    <a class="certificate" href="https://drive.google.com/file/d/1JUyUZuDfCpoxU4ehRlM2rXu5NoE4JXyi/view?usp=sharing" rel="noopener noreferrer" target="_blank"><span class="bub"><span class="dot react"></span>Advanced React</span></a>
-                    <a class="certificate" href="https://drive.google.com/file/d/1rY5ngxrMS5RFv3PN_6LJLi43WQTkNmCJ/view?usp=sharing" rel="noopener noreferrer" target="_blank"><span class="bub"><span class="dot clean"></span>Introduction to Clean Code</span></a>
-                    <a class="certificate" href="https://drive.google.com/file/d/1BFpcIXa_AVWHV7r_T_n240kR0mglXy8L/view?usp=sharing" rel="noopener noreferrer" target="_blank"><span class="bub"><span class="dot unit"></span>Introduction to Unit Testing</span></a>
-                    <a class="certificate" href="https://drive.google.com/file/d/1uimpuN1S9vbpLqnji0I0CHeAHiMCqUlu/view?usp=sharing" rel="noopener noreferrer" target="_blank"><span class="bub"><span class="dot ts"></span>Learn TypeScript</span></a>
-                    <a class="certificate" href="https://drive.google.com/file/d/1bcSiHmXSZMDLBz351U-0PN6xGp1VFEjO/view?usp=sharing" rel="noopener noreferrer" target="_blank"><span class="bub"><span class="dot react"></span>Whats new in React 19</span></a>
-                    <a class="certificate" href="https://drive.google.com/file/d/1FRHrcoObOgrZaq_prOCtozFoBGxjGDqJ/view?usp=sharing" rel="noopener noreferrer" target="_blank"><span class="bub"><span class="dot react"></span>Learn Class Components in React</span></a>
-                    <a class="certificate" href="https://drive.google.com/file/d/1rfJMq_s_OOoUI8Gkq24vRMfQSqzV50Eo/view?usp=sharing" rel="noopener noreferrer" target="_blank"><span class="bub"><span class="dot react"></span>Learn React</span></a>
-                    <a class="certificate" href="https://drive.google.com/file/d/1RMT-n4RhEQ8B2D1PyAzfzQdUodTOjFgz/view?usp=sharing" rel="noopener noreferrer" target="_blank"><span class="bub"><span class="dot be"></span>Backend Development and APIs</span></a>
-                    <a class="certificate" href="https://drive.google.com/file/d/1y-LBU9Z8j5_LsHdpAKK_oiYpubUAoM2g/view?usp=sharing" rel="noopener noreferrer" target="_blank"><span class="bub"><span class="dot bootstrap"></span>Frontend Development Libraries</span></a>
-                    <a class="certificate" href="https://drive.google.com/file/d/1Kd4caG0RgM3z3EgmNXJcD3DfWP1xf_Dr/view?usp=sharing" rel="noopener noreferrer" target="_blank"><span class="bub"><span class="dot d3"></span>Data Visualization</span></a>
-                    <a class="certificate" href="https://drive.google.com/file/d/1ZzasjaFRtPVITOsHo57v-z9pkZ7X8Nnr/view?usp=sharing" rel="noopener noreferrer" target="_blank"><span class="bub"><span class="dot mysql"></span>Relational Database</span></a>
-                    <a class="certificate" href="https://drive.google.com/file/d/1Zt6To-SZXV4c_p7zQrqAlIWww4siVRdB/view?usp=sharing" rel="noopener noreferrer" target="_blank"><span class="bub"><span class="dot js"></span>JavaScript Algorithms and Data Structures</span></a>
-                    <a class="certificate" href="https://drive.google.com/file/d/12G37PZu85ZDer4AaTLZM0U6DjNTDLN_N/view?usp=sharing" rel="noopener noreferrer" target="_blank"><span class="bub"><span class="dot responsive"></span>Responsive Web Design</span></a>
-                    <a class="certificate" href="https://drive.google.com/file/d/1x5r2npUIyNXRypsFpqls1TTChw2Ol0Py/view?usp=sharing" rel="noopener noreferrer" target="_blank"><span class="bub"><span class="dot swift"></span>Intro to Swift</span></a>
-                    <a class="certificate" href="https://drive.google.com/file/d/14kdqZMsquNYsN4vwvxqJ9TrtJ5r3gcPS/view?usp=sharing" rel="noopener noreferrer" target="_blank"><span class="bub"><span class="dot python"></span>Intro to Python</span></a>
-                    <a class="certificate" href="https://drive.google.com/file/d/1CkfQLPz9MP9L89bA0vorm95ZLBmz1eFh/view?usp=sharing" rel="noopener noreferrer" target="_blank"><span class="bub"><span class="dot postgresql"></span>Intro to SQL</span></a>
-                    <a class="certificate" href="https://drive.google.com/file/d/1HMA2RvlNumFmLcyCAy54Eg96gOSVxcGG/view?usp=sharing" rel="noopener noreferrer" target="_blank"><span class="bub"><span class="dot ts"></span>Intro to TypeScript</span></a>
-                    <a class="certificate" href="https://drive.google.com/file/d/1JfNmaCYrd1uHMX-5txPdiVhTMlK7daQk/view?usp=sharing" rel="noopener noreferrer" target="_blank"><span class="bub"><span class="dot js"></span>Intro to JavaScript</span></a>
-                    <a class="certificate" href="https://drive.google.com/file/d/1qtXHxixLVAt-CV4g-VyxF6TdObPpsZcJ/view?usp=sharing" rel="noopener noreferrer" target="_blank"><span class="bub"><span class="dot css"></span>Intro to CSS</span></a>
-                    <a class="certificate" href="https://drive.google.com/file/d/1Nr6iSZJWFSJYWjqGlgcCAPi5YDtPme4C/view?usp=sharing" rel="noopener noreferrer" target="_blank"><span class="bub"><span class="dot html"></span>Intro to HTML</span></a>
-                    <a class="certificate" href="https://drive.google.com/file/d/10z032blncwi8uhBdEEpixKS3djbrZJ_q/view?usp=sharing" rel="noopener noreferrer" target="_blank"><span class="bub"><span class="dot tech"></span>Tech For Everyone</span></a>
+                    <a class="certificate" href="https://drive.google.com/file/d/1z6vYe2SbvgJ-sNkoiNR_cSPxdLENFHu_/view?usp=sharing" target="_blank"><span class="bub"><span class="dot ai"></span>The AI Engineer Path</span></a>
+                    <a class="certificate" href="https://drive.google.com/file/d/1G88iS_Nei9aFGO3M1zX2IiGxjHvs9Nyt/view?usp=sharing" target="_blank"><span class="bub"><span class="dot html"></span>The Frontend Developer Career Path</span></a>
+                    <a class="certificate" href="https://drive.google.com/file/d/1WC7MRmPdYPWvXcRStgdgwoKoDJzyrI_O/view?usp=sharing" target="_blank"><span class="bub"><span class="dot js"></span>Advanced JavaScript</span></a>
+                    <a class="certificate" href="https://drive.google.com/file/d/1JUyUZuDfCpoxU4ehRlM2rXu5NoE4JXyi/view?usp=sharing" target="_blank"><span class="bub"><span class="dot react"></span>Advanced React</span></a>
+                    <a class="certificate" href="https://drive.google.com/file/d/1rY5ngxrMS5RFv3PN_6LJLi43WQTkNmCJ/view?usp=sharing" target="_blank"><span class="bub"><span class="dot clean"></span>Introduction to Clean Code</span></a>
+                    <a class="certificate" href="https://drive.google.com/file/d/1BFpcIXa_AVWHV7r_T_n240kR0mglXy8L/view?usp=sharing" target="_blank"><span class="bub"><span class="dot unit"></span>Introduction to Unit Testing</span></a>
+                    <a class="certificate" href="https://drive.google.com/file/d/1uimpuN1S9vbpLqnji0I0CHeAHiMCqUlu/view?usp=sharing" target="_blank"><span class="bub"><span class="dot ts"></span>Learn TypeScript</span></a>
+                    <a class="certificate" href="https://drive.google.com/file/d/1bcSiHmXSZMDLBz351U-0PN6xGp1VFEjO/view?usp=sharing" target="_blank"><span class="bub"><span class="dot react"></span>Whats new in React 19</span></a>
+                    <a class="certificate" href="https://drive.google.com/file/d/1FRHrcoObOgrZaq_prOCtozFoBGxjGDqJ/view?usp=sharing" target="_blank"><span class="bub"><span class="dot react"></span>Learn Class Components in React</span></a>
+                    <a class="certificate" href="https://drive.google.com/file/d/1rfJMq_s_OOoUI8Gkq24vRMfQSqzV50Eo/view?usp=sharing" target="_blank"><span class="bub"><span class="dot react"></span>Learn React</span></a>
+                    <a class="certificate" href="https://drive.google.com/file/d/1RMT-n4RhEQ8B2D1PyAzfzQdUodTOjFgz/view?usp=sharing" target="_blank"><span class="bub"><span class="dot be"></span>Backend Development and APIs</span></a>
+                    <a class="certificate" href="https://drive.google.com/file/d/1y-LBU9Z8j5_LsHdpAKK_oiYpubUAoM2g/view?usp=sharing" target="_blank"><span class="bub"><span class="dot bootstrap"></span>Frontend Development Libraries</span></a>
+                    <a class="certificate" href="https://drive.google.com/file/d/1Kd4caG0RgM3z3EgmNXJcD3DfWP1xf_Dr/view?usp=sharing" target="_blank"><span class="bub"><span class="dot d3"></span>Data Visualization</span></a>
+                    <a class="certificate" href="https://drive.google.com/file/d/1ZzasjaFRtPVITOsHo57v-z9pkZ7X8Nnr/view?usp=sharing" target="_blank"><span class="bub"><span class="dot mysql"></span>Relational Database</span></a>
+                    <a class="certificate" href="https://drive.google.com/file/d/1Zt6To-SZXV4c_p7zQrqAlIWww4siVRdB/view?usp=sharing" target="_blank"><span class="bub"><span class="dot js"></span>JavaScript Algorithms and Data Structures</span></a>
+                    <a class="certificate" href="https://drive.google.com/file/d/12G37PZu85ZDer4AaTLZM0U6DjNTDLN_N/view?usp=sharing" target="_blank"><span class="bub"><span class="dot responsive"></span>Responsive Web Design</span></a>
+                    <a class="certificate" href="https://drive.google.com/file/d/1x5r2npUIyNXRypsFpqls1TTChw2Ol0Py/view?usp=sharing" target="_blank"><span class="bub"><span class="dot swift"></span>Intro to Swift</span></a>
+                    <a class="certificate" href="https://drive.google.com/file/d/14kdqZMsquNYsN4vwvxqJ9TrtJ5r3gcPS/view?usp=sharing" target="_blank"><span class="bub"><span class="dot python"></span>Intro to Python</span></a>
+                    <a class="certificate" href="https://drive.google.com/file/d/1CkfQLPz9MP9L89bA0vorm95ZLBmz1eFh/view?usp=sharing" target="_blank"><span class="bub"><span class="dot postgresql"></span>Intro to SQL</span></a>
+                    <a class="certificate" href="https://drive.google.com/file/d/1HMA2RvlNumFmLcyCAy54Eg96gOSVxcGG/view?usp=sharing" target="_blank"><span class="bub"><span class="dot ts"></span>Intro to TypeScript</span></a>
+                    <a class="certificate" href="https://drive.google.com/file/d/1JfNmaCYrd1uHMX-5txPdiVhTMlK7daQk/view?usp=sharing" target="_blank"><span class="bub"><span class="dot js"></span>Intro to JavaScript</span></a>
+                    <a class="certificate" href="https://drive.google.com/file/d/1qtXHxixLVAt-CV4g-VyxF6TdObPpsZcJ/view?usp=sharing" target="_blank"><span class="bub"><span class="dot css"></span>Intro to CSS</span></a>
+                    <a class="certificate" href="https://drive.google.com/file/d/1Nr6iSZJWFSJYWjqGlgcCAPi5YDtPme4C/view?usp=sharing" target="_blank"><span class="bub"><span class="dot html"></span>Intro to HTML</span></a>
+                    <a class="certificate" href="https://drive.google.com/file/d/10z032blncwi8uhBdEEpixKS3djbrZJ_q/view?usp=sharing" target="_blank"><span class="bub"><span class="dot tech"></span>Tech For Everyone</span></a>
                 </div>
             </section>
 
             <section id="contact">
                 <button id="btn-chat">
-                    <a 
-                        href="mailto:noamguterman@gmail.com?subject=Hi Noam, I'd like to hire you" 
-                        rel="noopener noreferrer">Let's chat
+                    <a href="mailto:noamguterman@gmail.com?subject=Hi Noam, I'd like to hire you" >
+                        Let's chat
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z"></path></svg>
                     </a>
                 </button>
                 <div id="socials">
-                    <a href="https://github.com/noamguterman" rel="noopener noreferrer" target="_blank"><button class="btn social-btn">GitHub</button></a>
-                    <a href="https://www.linkedin.com/in/noamguterman/" rel="noopener noreferrer" target="_blank"><button class="btn social-btn">LinkedIn</button></a>
-                    <a href="https://www.noamguterman.com/" rel="noopener noreferrer" target="_blank"><button class="btn social-btn">Audio Design</button></a>
+                    <a href="https://github.com/noamguterman" target="_blank"><button class="btn social-btn">GitHub</button></a>
+                    <a href="https://www.linkedin.com/in/noamguterman/" target="_blank"><button class="btn social-btn">LinkedIn</button></a>
+                    <a href="https://www.noamguterman.com/" target="_blank"><button class="btn social-btn">Audio Design</button></a>
                 </div>
             </section>
         </main>
