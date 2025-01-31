@@ -207,6 +207,7 @@ nav #btn-home {
   left: 47%;
   border-radius: 50%;
   background-color: #000014;
+  opacity: 0;
 }
 #hero #avatar-container .eye.right {
   top: 21.8%;
@@ -276,18 +277,12 @@ section svg {
   margin-left: 0.5em;
   background-color: #f2f2f2;
 }
-#projects button.code {
-  background: none;
-  padding: 0;
-  margin: 0;
-}
 
 #cta {
   margin-top: 3em;
 }
 
-#cta button.blue-btn,
-#projects button.blue-btn {
+#cta button.blue-btn {
   background-color: #126cad;
   color: white;
 }
@@ -402,18 +397,18 @@ section h4 a {
 
 #projects .project .links {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-top: auto;
-  align-items: flex-end;
 }
-#projects .project .links .code {
-  font-weight: 500;
+
+#projects .project .links a {
+  padding: .7em .9em;
+  border-radius: 50%;
 }
-#projects .project .links .code .outline {
-  color: transparent;
-}
-#projects .project .links .code:hover .outline {
-  color: #126cad;
+
+#projects .project .links a svg {
+  position: relative;
+  top: 1px;
 }
 
 #languages #languages-container {
@@ -674,7 +669,13 @@ nav.dark {
   transform-origin: center;
 }
 
-#tools .bub {
+#projects .links a:active {
+  transform: scale(0.95);
+  translate: 0px;
+  transform-origin: center;
+}
+
+.bub {
   position: relative;
   transform-style: preserve-3d;
   backface-visibility: hidden;
@@ -689,13 +690,12 @@ nav.dark {
   will-change: transform;
 }
 
-#tools .bub:hover,
+.bub:hover,
 #certificates a:hover {
   position: relative;
   transform: scale3d(1.1, 1.1, 1);
   transform-origin: center;
   translate: none;
-  font-weight: 500;
   z-index: 2;
 }
 
@@ -750,23 +750,22 @@ nav #btn-theme.dark:hover {
 @media (hover: hover) {
   nav #btn-nav-menu:hover,
   nav #btn-theme:hover,
-  nav #btn-home:hover {
+  nav #btn-home:hover,
+  #contact #socials .social-btn:hover,
+  #projects .links a:hover {
     background-color: #d3d4d6;
   }
   #cta button:hover {
     background-color: #d3d3d2;
   }
-  #cta button.blue-btn:hover,
-  #projects button.blue-btn:hover {
+  #cta button.blue-btn:hover {
     background-color: #0e5e95;
-  }
-  #contact #socials .social-btn:hover {
-    background-color: #d3d4d6;
   }
   nav #btn-nav-menu.dark:hover,
   nav #btn-theme.dark:hover,
   nav #btn-home.dark:hover,
-  #contact #socials .social-btn.dark:hover {
+  #contact #socials .social-btn.dark:hover,
+  #projects .links a.dark:hover {
     background-color: #393e47;
   }
   #cta button.dark:hover {
@@ -777,8 +776,8 @@ nav #btn-theme.dark:hover {
 @media (hover: none) {
   .btn:hover,
   #cta button:hover,
-  #projects button:hover,
-  #contact #socials .social-btn:hover {
+  #contact #socials .social-btn:hover,
+  #projects .links a:hover {
       background-color: inherit !important;
       color: inherit !important;
   }
@@ -800,8 +799,9 @@ nav #btn-theme.dark:hover {
   .btn,
   .project,
   .language,
-  #tools .bub,
-  #certificates a {
+  .bub,
+  #certificates a,
+  #projects a {
     transition: transform 0.1s ease-in-out, background-color 0.2s ease-out,
       font-weight 0.2s ease-out;
   }

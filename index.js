@@ -15,7 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
     getLocalStorageTheme()
     updateDates()
     handleNavScroll()
-    applyAnimationsDelay()
+    applyCtaAnimationsDelay()
+    showEyesWhenAvatarLoads()
     handleLanguageTouch()
 
     setTimeout(() => {
@@ -23,23 +24,34 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 100)
 })
 
+function showEyesWhenAvatarLoads() {
+    const avatar = document.getElementById("avatar")
+    if (avatar.complete) {
+        document.querySelectorAll(".eye").forEach(eye => {
+            eye.style.opacity = "1"
+        })
+    } else {
+        requestAnimationFrame(showEyesWhenAvatarLoads)
+    }
+}
+
 function handleLanguageTouch() {
     document.querySelectorAll('#languages .language').forEach(language => {
         language.addEventListener('click', () => {
             language.classList.toggle('active')
             
             setTimeout(() => {
-                language.classList.remove('active');
+                language.classList.remove('active')
             }, 300)
         })
     })
 }
 
-function applyAnimationsDelay() {
+function applyCtaAnimationsDelay() {
     const ctaButtons = document.querySelectorAll("#cta button")
 
     ctaButtons.forEach((button, index) => {
-        button.style.animationDelay = `${index * 0.1}s`;
+        button.style.animationDelay = `${index * 0.1}s`
     })
 }
 
@@ -63,6 +75,7 @@ function applyThemeToElements(theme) {
         document.querySelectorAll('.nav-a'),
         document.querySelectorAll('.social-btn'),
         document.querySelectorAll('.date'),
+        document.querySelectorAll('.proj-link'),
         [document.getElementById('btn-cv')],
         [document.querySelector('nav')],
         [document.getElementById('nav-menu')],
@@ -96,8 +109,8 @@ function handleNavScroll() {
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault()
-            const targetId = link.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
+            const targetId = link.getAttribute('href').substring(1)
+            const targetElement = document.getElementById(targetId)
 
             if (targetElement) {
                 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
@@ -128,11 +141,11 @@ function updateDates() {
 }
 
 function addOutOfFocusClass() {
-    document.documentElement.classList.add('window-out-of-focus');
+    document.documentElement.classList.add('window-out-of-focus')
 }
 
 function removeOutOfFocusClass() {
-    document.documentElement.classList.remove('window-out-of-focus');
+    document.documentElement.classList.remove('window-out-of-focus')
 }
 
 function handleNavMenu(e) {
