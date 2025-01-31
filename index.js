@@ -173,10 +173,17 @@ function handleThemeButton() {
     localStorage.setItem('theme', newTheme)
 
     const themeBtn = document.getElementById('btn-theme')
+
+    const themeIcons = {
+        light: "./assets/light-mode-icon.svg",
+        dark: "./assets/dark-mode-icon.svg"
+    }
+
+    const icon = new Image()
+    icon.src = themeIcons[newTheme]
     
     themeBtn.classList.remove('rotate-animation', 'rotate-animation-reverse')
     void themeBtn.offsetWidth
-
     themeBtn.classList.remove('dark', 'light')
     themeBtn.classList.add(newTheme)
     themeBtn.classList.add(newTheme === 'dark' ? 'rotate-animation-reverse' : 'rotate-animation')
