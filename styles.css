@@ -192,15 +192,16 @@ nav #btn-home {
   position: relative;
   justify-content: center;
   align-items: center;
-  width: 400px;
-  height: 400px;
+  width: 295px;
+  max-width: 100%;
+  height: auto;
   margin: 0 auto;
   margin-top: 6em;
   transform: translateX(-15px);
 }
 
 #hero #avatar-container .eye {
-  width: 4%;
+  width: 6%;
   height: 7%;
   position: absolute;
   top: 22%;
@@ -211,7 +212,7 @@ nav #btn-home {
 }
 #hero #avatar-container .eye.right {
   top: 21.8%;
-  left: 62%;
+  left: 66%;
 }
 
 #hero #avatar {

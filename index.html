@@ -17,7 +17,8 @@
         <meta property="og:url" content="https://noamguterman.dev/">
         <link rel="icon" href="./assets/favicon.ico">
         <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
-        <link rel="preload" href="./assets/avatar.webp" as="image" type="image/webp">
+        <link rel="preload" href="./assets/avatar_1x.webp" as="image" type="image/webp">
+        <link rel="preload" href="./assets/avatar_2x.webp" as="image" type="image/webp">
         <link rel="preload" href="./assets/fonts/Quicksand.woff2" as="font" type="font/woff2" crossorigin="anonymous">
         <link rel="preload" href="./assets/light-mode-icon.svg" as="image" type="image/svg+xml">
         <link rel="preload" href="./assets/dark-mode-icon.svg" as="image" type="image/svg+xml">
@@ -51,7 +52,13 @@
                 <div id="avatar-container">
                     <div class="eye left" id="left-eye"></div>
                     <div class="eye right" id="right-eye"></div>
-                    <img id="avatar" src="./assets/avatar.webp" width="295" height="350" alt="Cartoon avatar of Noam Guterman" />
+                    <img 
+                        id="avatar" 
+                        src="./assets/avatar_1x.webp" 
+                        srcset="./assets/avatar_1x.webp 1x, ./assets/avatar_2x.webp 2x"
+                        width="295" height="400" 
+                        alt="Cartoon avatar of Noam Guterman" 
+                    />
                 </div>
                 <h1 id="hi">Hi! I'm Noam Guterman</h1>
                 <h2>Frontend Developer</h2>
