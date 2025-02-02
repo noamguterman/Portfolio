@@ -366,8 +366,8 @@ section h4 a {
   background-color: #a7adba;
 }
 
-#certificates #certificates-container,
-#tools #tools-container {
+#certificates .certificates-container,
+#tools .tools-container {
   display: flex;
   flex-wrap: wrap;
   gap: 0.8em;
@@ -447,6 +447,19 @@ section h4 a {
   padding: 0.4em 1em;
   border-radius: 20px;
   cursor: default;
+}
+
+.tools-sub, 
+.cert-sub {
+  font-weight: 600;
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 1em;
+}
+
+.tools-container, 
+.certificates-container {
+  margin-bottom: 2em;
 }
 
 #contact #btn-chat {
