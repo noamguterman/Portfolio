@@ -654,6 +654,9 @@ footer svg {
 .clean {
   background-color: #9c27b0;
 }
+.tailwind {
+  background-color: #00bdfe;
+}
 
 body.dark,
 nav.dark,
