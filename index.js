@@ -76,6 +76,7 @@ function applyThemeToElements(theme) {
         document.querySelectorAll('.social-btn'),
         document.querySelectorAll('.date'),
         document.querySelectorAll('.proj-link'),
+        document.querySelectorAll('.tooltip-text'),
         [document.getElementById('btn-cv')],
         [document.querySelector('nav')],
         [document.getElementById('nav-menu')],
@@ -83,7 +84,7 @@ function applyThemeToElements(theme) {
         [document.getElementById('btn-theme')],
         [document.getElementById('btn-home')],
         [document.getElementById('education-container')],
-        [document.getElementById('experience-container')]
+        [document.getElementById('experience-container')],
     ]
 
     elements.forEach(group => {

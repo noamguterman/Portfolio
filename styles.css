@@ -251,6 +251,36 @@ section svg {
   top: 5px;
 }
 
+#years-in-tech-container {
+  position: relative;
+}
+#years-in-tech-container #info-icon {
+  font-family: serif;
+  position: absolute;
+  margin-left: .3em;
+  cursor: pointer;
+}
+.tooltip-text {
+  visibility: hidden;
+  width: 220px;
+  background-color: rgba(18, 19, 20, 0.85);
+  color: #fff;
+  text-align: center;
+  font-size: .8rem;
+  padding: 6px;
+  border-radius: 4px;
+  position: absolute;
+  z-index: 10;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+}
+#info-icon:hover + .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
 section svg {
   top: 4px;
 }
@@ -657,6 +687,18 @@ footer svg {
 .tailwind {
   background-color: #00bdfe;
 }
+.jenkins {
+  background-color: #D24939;
+}
+.confluence {
+  background-color: #0052CC;
+}
+.photoshop {
+  background-color: #31A8FF;
+}
+.premiere {
+  background-color: #EA77FF;
+}
 
 body.dark,
 nav.dark,
@@ -763,6 +805,11 @@ nav #btn-theme.dark:hover {
   background-color: #393e47;
 }
 
+.tooltip-text.dark {
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #000000;
+}
+
 .rotate-animation,
 .rotate-animation-reverse {
   will-change: opacity, transform;
@@ -811,6 +858,10 @@ nav #btn-theme.dark:hover {
 
   html {
     scroll-behavior: smooth;
+  }
+
+  .tooltip-text {
+    transition: opacity 0.2s;
   }
 
   #cta button {
@@ -971,9 +1022,6 @@ nav #btn-theme.dark:hover {
 }
 
 @media (max-width: 500px) {
-  /* #hero #avatar-container {
-    transform: scale(.9);
-  } */
   #contact #btn-chat {
     font-size: 2.75rem;
   }
@@ -994,7 +1042,7 @@ nav #btn-theme.dark:hover {
   }
 }
 
-@media (max-width: 390px) {
+@media (max-width: 405px) {
   #cta {
     flex-direction: column;
     align-items: center;
