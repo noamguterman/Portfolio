@@ -259,6 +259,8 @@ section svg {
   position: absolute;
   margin-left: .3em;
   cursor: pointer;
+  user-select: none;
+  pointer-events: auto;
 }
 .tooltip-text {
   visibility: hidden;
@@ -275,8 +277,10 @@ section svg {
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
+  user-select: none;
 }
-#info-icon:hover + .tooltip-text {
+#info-icon:hover + .tooltip-text,
+.tooltip-text.active {
   visibility: visible;
   opacity: 1;
 }
