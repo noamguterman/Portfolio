@@ -300,7 +300,7 @@ section svg {
   margin: 0;
 }
 
-#cta button,
+#cta a,
 #projects button {
   font-size: 1.1rem;
   font-weight: 700;
@@ -317,7 +317,7 @@ section svg {
   margin-top: 3em;
 }
 
-#cta button.blue-btn {
+#cta a.blue-btn {
   background-color: #126cad;
   color: white;
 }
@@ -720,7 +720,7 @@ nav.dark,
 #languages .language.dark,
 #certificates .certificate.dark,
 #tools .tool.dark,
-#cta button.dark {
+#cta a.dark {
   background-color: #181e25;
 }
 nav.dark {
@@ -827,10 +827,10 @@ nav #btn-theme.dark:hover {
   #projects .links a:hover {
     background-color: #d3d4d6;
   }
-  #cta button:hover {
+  #cta a:hover {
     background-color: #d3d3d2;
   }
-  #cta button.blue-btn:hover {
+  #cta a.blue-btn:hover {
     background-color: #0e5e95;
   }
   nav #btn-nav-menu.dark:hover,
@@ -840,14 +840,14 @@ nav #btn-theme.dark:hover {
   #projects .links a.dark:hover {
     background-color: #393e47;
   }
-  #cta button.dark:hover {
+  #cta a.dark:hover {
     background-color: #15181e;
   }
 }
 
 @media (hover: none) {
   .btn:hover,
-  #cta button:hover,
+  #cta a:hover,
   #contact #socials .social-btn:hover,
   #projects .links a:hover {
       background-color: inherit !important;
@@ -868,7 +868,7 @@ nav #btn-theme.dark:hover {
     transition: opacity 0.2s;
   }
 
-  #cta button {
+  #cta a {
     animation: ctaWiggle 0.3s ease-out both;
   }
 
