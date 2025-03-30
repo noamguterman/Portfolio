@@ -56,7 +56,11 @@ function applyCtaAnimationsDelay() {
 }
 
 function getLocalStorageTheme() {
-    const currentTheme = localStorage.getItem('theme') || 'light'
+    let currentTheme = localStorage.getItem('theme')
+    if (!currentTheme) {
+        currentTheme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+        localStorage.setItem('theme', currentTheme)
+    }
     
     document.body.classList.toggle('dark', currentTheme === 'dark')
     document.documentElement.classList.toggle('dark', currentTheme === 'dark')
