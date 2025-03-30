@@ -19,6 +19,15 @@
         <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
         <link rel="preload" href="./assets/avatar.webp" as="image" type="image/webp">
         <link rel="preload" href="./assets/fonts/Quicksand.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+        <script>
+            // Check localStorage or system preference
+            const userPref = localStorage.getItem("theme");
+            const systemPref = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        
+            if (userPref === "dark" || (!userPref && systemPref)) {
+              document.documentElement.classList.add("dark");
+            }
+          </script>
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
