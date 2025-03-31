@@ -12,12 +12,20 @@
         </script>
         <style>
             /* Critical dark theme styles */
-            .dark body {
+            body.dark,
+            nav.dark,
+            #nav-menu.dark {
                 background-color: #1d222b;
                 color: #a7adba;
             }
-            .dark nav {
-                background-color: #1d222b;
+            :root.dark {
+                scrollbar-color: #707780 #1c222a;
+            }
+            #cta a.dark {
+                background-color: #181e25;
+            }
+            nav.dark {
+                box-shadow: 0 0 3px #1b1b1b;
             }
         </style>
         <title>Noam Guterman | Frontend Developer</title>
