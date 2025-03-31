@@ -506,6 +506,9 @@ section h4 a {
   color: #126cad;
   text-align: center;
 }
+body.dark #contact #btn-chat {
+  color: #168EE3;
+}
 
 #contact #socials {
   display: flex;
