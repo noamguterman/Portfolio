@@ -11,21 +11,21 @@
             }
         </script>
         <style>
-            /* Critical dark theme styles */
-            body.dark,
-            nav.dark,
-            #nav-menu.dark {
-                background-color: #1d222b;
-                color: #a7adba;
+            /* Critical dark theme styles targeting elements when html has .dark */
+            html.dark body,
+            html.dark nav,
+            html.dark #nav-menu {
+              background-color: #1d222b;
+              color: #a7adba;
             }
-            :root.dark {
-                scrollbar-color: #707780 #1c222a;
+            html.dark :root {
+              scrollbar-color: #707780 #1c222a;
             }
-            #cta a.dark {
-                background-color: #181e25;
+            html.dark #cta a {
+              background-color: #181e25;
             }
-            nav.dark {
-                box-shadow: 0 0 3px #1b1b1b;
+            html.dark nav {
+              box-shadow: 0 0 3px #1b1b1b;
             }
         </style>
         <title>Noam Guterman | Frontend Developer</title>
